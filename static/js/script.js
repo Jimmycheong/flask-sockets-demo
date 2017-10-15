@@ -1,8 +1,7 @@
 $(document).ready(function(){
     var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
 
-
-    socket.on('my response', function(msg) {
+    socket.on('connect', function(msg) {
       console.log("Connected")
       console.log(msg)
         // $('#log').append('<p>Received: ' + msg.data + '</p>');
